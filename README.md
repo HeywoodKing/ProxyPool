@@ -9,7 +9,7 @@ python3.7
 pip19.0.2
 pipenv
 aiohttp
-fastapi
+fastapi[flask]
 redis
 
 ```
@@ -37,7 +37,7 @@ PASSWORD为Redis密码，如果为空，则设置为None
 #### 安装依赖
 
 ```
-pip3 install -r requirements.txt
+pipenv install 
 ```
 
 #### 打开代理池和API
