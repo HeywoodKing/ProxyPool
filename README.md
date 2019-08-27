@@ -14,9 +14,6 @@ redis
 
 ```
 
-
-# ProxyPool
-
 ## 安装
 
 ### 安装Python
