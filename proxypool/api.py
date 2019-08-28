@@ -18,6 +18,8 @@ def index():
     return '<h2>Welcome to Proxy Pool System</h2>'
 
 
+@app.route('/proxy')
+@app.route('/ip')
 @app.route('/get')
 @app.route('/random')
 def get_proxy():

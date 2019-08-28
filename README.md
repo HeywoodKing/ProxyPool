@@ -17,12 +17,43 @@ redis
 ## 安装
 
 ### 安装Python
-
 至少Python3.5以上
 
-### 安装Redis
-
+### 安装Redis服务
 安装好之后将Redis服务开启
+
+### 安装虚拟环境
+```
+pip install pipenv
+```
+
+### 使用pipenv安装依赖
+##### 依赖环境
+```
+python3.7
+pip19.0.2
+pipenv
+aiohttp
+fastapi[flask]
+redis
+requests
+pyquery
+
+```
+
+```
+pipenv install --dev
+```
+
+### 正式环境部署
+```
+pipenv install --ignore-pipfile
+```
+
+### 安装完依赖之后查看
+```
+pipenv graph
+```
 
 ### 配置代理池
 
@@ -34,11 +65,6 @@ cd proxypool
 
 PASSWORD为Redis密码，如果为空，则设置为None
 
-#### 安装依赖
-
-```
-pipenv install 
-```
 
 #### 打开代理池和API
 
