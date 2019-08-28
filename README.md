@@ -78,13 +78,15 @@ python3 run.py
 
 利用requests获取方法如下
 
-```python
+python
+```
 import requests
 
 PROXY_POOL_URL = 'http://localhost:5555/random'
-
+```
 
 + 方法一：
+```
 def get_proxy():
     try:
         response = requests.get(PROXY_POOL_URL)
@@ -92,8 +94,10 @@ def get_proxy():
             return response.text
     except ConnectionError:
         return None
+```
         
 + 方法二：
+```
 def get_proxy():
     res = requests.get('http://192.168.1.79:5555/get')
     soup = BeautifulSoup(res.text, "lxml")
