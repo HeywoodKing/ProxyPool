@@ -8,8 +8,6 @@ Using python to build free, practical, efficient, asynchronous, flexible pool of
 python3.7
 pip19.0.2
 pipenv
-aiohttp
-fastapi[flask]
 redis
 
 ```
