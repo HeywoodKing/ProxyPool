@@ -19,10 +19,10 @@ VALID_STATUS_CODES = [200, 302]
 # 代理池数量界限
 POOL_UPPER_THRESHOLD = 50000
 
-# 检查周期
+# 检查周期(秒)
 TESTER_CYCLE = 20
-# 获取周期
-GETTER_CYCLE = 300
+# 获取周期(秒)
+GETTER_CYCLE = 600
 
 # 测试API，建议抓哪个网站测哪个
 TEST_URL = 'http://www.baidu.com'
