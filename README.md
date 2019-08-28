@@ -65,9 +65,11 @@ cd proxypool
 PASSWORD为Redis密码，如果为空，则设置为None
 
 
-#### 打开代理池和API
+#### 运行代理池（API）
 
 ```
+python run.py
+或
 python3 run.py
 ```
 
@@ -81,6 +83,8 @@ import requests
 
 PROXY_POOL_URL = 'http://localhost:5555/random'
 
+
++ 方法一：
 def get_proxy():
     try:
         response = requests.get(PROXY_POOL_URL)
@@ -88,5 +92,12 @@ def get_proxy():
             return response.text
     except ConnectionError:
         return None
+        
++ 方法二：
+def get_proxy():
+    res = requests.get('http://192.168.1.79:5555/get')
+    soup = BeautifulSoup(res.text, "lxml")
+    proxy = soup.get_text()
+    return proxy
 ```
 
