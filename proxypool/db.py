@@ -1,7 +1,7 @@
 import redis
 from proxypool.error import PoolEmptyError
 from proxypool.setting import REDIS_HOST, REDIS_PORT, REDIS_PASSWORD, REDIS_KEY
-from proxypool.setting import MAX_SCORE, MIN_SCORE, INITIAL_SCORE
+from proxypool.setting import MAX_SCORE, MIN_SCORE, INITIAL_SCORE, ADJUST_SCORE
 from random import choice
 import re
 
@@ -52,8 +52,9 @@ class RedisClient(object):
         """
         score = self.db.zscore(REDIS_KEY, proxy)
         if score and score > MIN_SCORE:
-            print('代理', proxy, '当前分数', score, '减1')
-            return self.db.zincrby(REDIS_KEY, -1, proxy)
+            print('代理', proxy, '当前分数', score, '减{}'.format(ADJUST_SCORE))
+            # return self.db.zincrby(REDIS_KEY, -1, proxy)
+            return self.db.zincrby(REDIS_KEY, ADJUST_SCORE, proxy)
         else:
             print('代理', proxy, '当前分数', score, '移除')
             return self.db.zrem(REDIS_KEY, proxy)

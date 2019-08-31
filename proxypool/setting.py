@@ -13,16 +13,18 @@ REDIS_KEY = 'proxies'
 MAX_SCORE = 100
 MIN_SCORE = 0
 INITIAL_SCORE = 10
+# 检测ip有效无效的分值调节值
+ADJUST_SCORE = -10
 
 VALID_STATUS_CODES = [200, 302]
 
 # 代理池数量界限
-POOL_UPPER_THRESHOLD = 50000
+POOL_UPPER_THRESHOLD = 5000
 
 # 检查周期(秒)
 TESTER_CYCLE = 20
 # 获取周期(秒)
-GETTER_CYCLE = 600
+GETTER_CYCLE = 60*10
 
 # 测试API，建议抓哪个网站测哪个
 TEST_URL = 'http://www.baidu.com'
@@ -37,4 +39,4 @@ GETTER_ENABLED = True
 API_ENABLED = True
 
 # 最大批测试量
-BATCH_TEST_SIZE = 10
+BATCH_TEST_SIZE = 100
