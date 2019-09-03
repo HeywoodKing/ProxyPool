@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="658cbc95-d5e3-4792-b31e-90bc6231252d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxypool/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxypool/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxypool/crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxypool/crawler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxypool/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxypool/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxypool/getter.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxypool/getter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxypool/scheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxypool/scheduler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxypool/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxypool/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxypool/aioapi.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxypool/aioapi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,34 +28,46 @@
         <counts>
           <entry key="Pipfile" value="3" />
           <entry key="md" value="5" />
-          <entry key="py" value="15" />
+          <entry key="py" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="5" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="15" />
+          <entry key="Python" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Pipfile" value="7" />
           <entry key="md" value="275" />
-          <entry key="py" value="2062" />
+          <entry key="py" value="2124" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="268" />
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="2069" />
+          <entry key="Python" value="2131" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proxypool/db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1824">
+              <caret line="96" column="28" lean-forward="true" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proxypool/setting.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -70,27 +77,36 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proxypool/scheduler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="-29">
+              <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
                 <marker date="1567515706532" expanded="true" signature="936:945" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/proxypool/aioapi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+            <state relative-caret-position="246">
+              <caret line="38" column="66" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="66" />
               <folding>
                 <element signature="e#1#14#0" expanded="true" />
+                <marker date="1567516382218" expanded="true" signature="781:786" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/workspace/virtualenv/proxypool-QcYvGcSy/Lib/site-packages/aiohttp/web_response.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="490" column="50" lean-forward="true" selection-start-line="490" selection-start-column="50" selection-end-line="490" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -125,8 +141,8 @@
         <option value="$PROJECT_DIR$/proxypool/api.py" />
         <option value="$PROJECT_DIR$/proxypool/getter.py" />
         <option value="$PROJECT_DIR$/proxypool/crawler.py" />
-        <option value="$PROJECT_DIR$/proxypool/aioapi.py" />
         <option value="$PROJECT_DIR$/proxypool/scheduler.py" />
+        <option value="$PROJECT_DIR$/proxypool/aioapi.py" />
       </list>
     </option>
   </component>
@@ -258,7 +274,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32929516" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32378855" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.4482379" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32929516" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -302,50 +318,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proxypool/crawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-          <folding>
-            <element signature="e#794#1475#0" />
-            <element signature="e#1481#1493#0" />
-            <element signature="e#2252#2874#0" />
-            <element signature="e#2880#2909#0" />
-            <element signature="e#4682#6058#0" />
-            <element signature="e#6024#6034#0" />
-            <element signature="e#7135#7633#0" />
-            <element signature="e#7587#7612#0" />
-            <element signature="e#9559#10258#0" />
-            <element signature="e#10264#10273#0" />
-            <element signature="e#11231#12426#0" />
-            <element signature="e#12432#12442#0" />
-            <element signature="e#13936#14635#0" />
-            <element signature="e#14686#15129#0" />
-            <element signature="e#15180#15696#0" />
-            <element signature="e#15753#17228#0" />
-            <element signature="e#17285#19021#0" />
-            <element signature="e#19076#20494#0" />
-            <element signature="e#20659#20667#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proxypool/getter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
           <folding>
             <element signature="e#38#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proxypool/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="96" column="28" lean-forward="true" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -367,27 +345,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proxypool/setting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/workspace/virtualenv/proxypool-QcYvGcSy/Lib/site-packages/aiohttp/web.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="377" column="37" lean-forward="true" selection-start-line="377" selection-start-column="37" selection-end-line="377" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proxypool/aioapi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
-          <folding>
-            <element signature="e#1#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -408,11 +369,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/proxypool/scheduler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="-29">
+          <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
             <marker date="1567515706532" expanded="true" signature="936:945" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proxypool/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1824">
+          <caret line="96" column="28" lean-forward="true" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proxypool/setting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proxypool/crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding>
+            <element signature="e#14#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/workspace/virtualenv/proxypool-QcYvGcSy/Lib/site-packages/aiohttp/web_response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="490" column="50" lean-forward="true" selection-start-line="490" selection-start-column="50" selection-end-line="490" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proxypool/aioapi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="38" column="66" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="66" />
+          <folding>
+            <element signature="e#1#14#0" expanded="true" />
+            <marker date="1567516382218" expanded="true" signature="781:786" ph="..." />
           </folding>
         </state>
       </provider>

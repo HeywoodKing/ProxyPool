@@ -36,7 +36,7 @@ def get_conn():
 
 @routes.get('/')
 async def index(request):
-    return web.Response(text='Welcome to Proxy Pool System')
+    return web.Response(text='<h2>Welcome to Proxy Pool System</h2>', content_type='text/html')
 
 
 @routes.get('/count')
