@@ -4,8 +4,8 @@ from proxypool.getter import Getter
 from proxypool.tester import Tester
 # from proxypool.db import RedisClient
 from proxypool.setting import *
-# from proxypool.api import app
-from proxypool.aioapi import app
+# from proxypool.api_flask import app
+from proxypool.api_aiohttp import app
 from aiohttp import web
 
 

@@ -27,6 +27,34 @@ def outter(func):
     return inner
 
 
+@web.middleware
+async def print_proxy_middleware(request, handler):
+    import sys
+    import time
+    start_time = time.time()
+    response = await handler(request)
+    end_time = time.time()
+    execution_time = (end_time - start_time) * 1000
+    print("time is %d ms" % execution_time)
+    print('handler: {}'.format(handler), end='', flush=True, )
+    sys.stdout.flush()
+    return response
+
+
+@web.middleware
+async def error_middleware(request, handler):
+    try:
+        response = await handler(request)
+        if response.status != 404:
+            return response
+        message = response.message
+    except web.HTTPException as ex:
+        if ex.status != 404:
+            raise
+        message = ex.reason
+    return web.json_response({'error': message})
+
+
 def get_conn():
     # if not hasattr(g, 'redis'):
     #     redis = RedisClient()
@@ -119,7 +147,7 @@ async def get_proxy_range(request):
     return web.Response(text=(start + '/' + stop))
 
 
-app = web.Application()
+app = web.Application(middlewares=[print_proxy_middleware, error_middleware])
 app.add_routes(routes)
 # app.router.add_routes(routes)
 # app.add_routes([
