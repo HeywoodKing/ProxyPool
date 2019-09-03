@@ -90,6 +90,13 @@ class RedisClient(object):
         :return: 全部代理列表
         """
         return self.db.zrangebyscore(REDIS_KEY, MIN_SCORE, MAX_SCORE)
+
+    def max_all(self):
+        """
+        获取分值最大的全部代理
+        :return: 分值最大的全部代理列表
+        """
+        return self.db.zrangebyscore(REDIS_KEY, MAX_SCORE, MAX_SCORE)
     
     def batch(self, start, stop):
         """

@@ -1,4 +1,4 @@
-import json
+# import json
 import re
 import time
 from .utils import get_page
@@ -20,13 +20,18 @@ class ProxyMetaclass(type):
 
 class Crawler(object, metaclass=ProxyMetaclass):
     def get_proxies(self, callback):
+        """
+        执行抓取代理IP方法，返回这一批次的代理列表
+        :param callback:
+        :return: 返回这一批次的代理列表
+        """
         proxies = []
         for proxy in eval("self.{}()".format(callback)):
             print('成功获取到代理', proxy)
             proxies.append(proxy)
         return proxies
 
-    def crawl_daili66(self, page_count=4):
+    def crawl_daili66(self, page_count=5):
         """
         获取66代理
         :param page_count: 页码
@@ -60,17 +65,17 @@ class Crawler(object, metaclass=ProxyMetaclass):
     #
     #     except Exception as ex:
     #         print('{}抓取出错: {}'.format('66免费代理', ex))
-    
-    def crawl_kuaidaili(self):
+
+    def crawl_kuaidaili(self, page_count=5):
         """
         获取快代理
         :return:
         """
-        for page in range(1, 4):
+        for page in range(1, page_count + 1):
             url = 'http://www.kuaidaili.com/free/inha/{}/'.format(page)
             html = get_page(url=url)
             if html:
-                ip_address = re.compile('<td data-title="IP">(.*?)</td>') 
+                ip_address = re.compile('<td data-title="IP">(.*?)</td>')
                 re_ip_address = ip_address.findall(html)
                 port = re.compile('<td data-title="PORT">(.*?)</td>')
                 re_port = port.findall(html)
@@ -109,26 +114,26 @@ class Crawler(object, metaclass=ProxyMetaclass):
     #             print('{}抓取出错: {}'.format('快代理', ex))
     #         time.sleep(1)
 
-    def crawl_xicidaili(self):
+    def crawl_xicidaili(self, page_count=5):
         """
         获取西刺代理
         :return:
         """
-        for page in range(1, 3):
+        for page in range(1, page_count + 1):
             url = 'http://www.xicidaili.com/nn/{}'.format(page)
             headers = {
-                'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-                'Cookie':'_free_proxy_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWRjYzc5MmM1MTBiMDMzYTUzNTZjNzA4NjBhNWRjZjliBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMUp6S2tXT3g5a0FCT01ndzlmWWZqRVJNek1WanRuUDBCbTJUN21GMTBKd3M9BjsARg%3D%3D--2a69429cb2115c6a0cc9a86e0ebe2800c0d471b3',
-                'Host':'www.xicidaili.com',
-                'Referer':'http://www.xicidaili.com/nn/3',
-                'Upgrade-Insecure-Requests':'1',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+                'Cookie': '_free_proxy_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWRjYzc5MmM1MTBiMDMzYTUzNTZjNzA4NjBhNWRjZjliBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMUp6S2tXT3g5a0FCT01ndzlmWWZqRVJNek1WanRuUDBCbTJUN21GMTBKd3M9BjsARg%3D%3D--2a69429cb2115c6a0cc9a86e0ebe2800c0d471b3',
+                'Host': 'www.xicidaili.com',
+                'Referer': 'http://www.xicidaili.com/nn/3',
+                'Upgrade-Insecure-Requests': '1',
             }
             html = get_page(url=url, options=headers)
             if html:
                 find_trs = re.compile('<tr class.*?>(.*?)</tr>', re.S)
                 trs = find_trs.findall(html)
                 for tr in trs:
-                    find_ip = re.compile('<td>(\d+\.\d+\.\d+\.\d+)</td>') 
+                    find_ip = re.compile('<td>(\d+\.\d+\.\d+\.\d+)</td>')
                     re_ip_address = find_ip.findall(tr)
                     find_port = re.compile('<td>(\d+)</td>')
                     re_port = find_port.findall(tr)
@@ -159,12 +164,12 @@ class Crawler(object, metaclass=ProxyMetaclass):
     #             print('{}抓取出错: {}'.format('西刺代理', ex))
     #         time.sleep(1)
 
-    def crawl_ip3366(self):
+    def crawl_ip3366(self, page_count=5):
         """
         获取ip3366
         :return:
         """
-        for page in range(1, 4):
+        for page in range(1, page_count + 1):
             url = 'http://www.ip3366.net/free/?stype=1&page={}'.format(page)
             html = get_page(url=url)
             ip_address = re.compile('<tr>\s*<td>(.*?)</td>\s*<td>(.*?)</td>')
@@ -216,7 +221,7 @@ class Crawler(object, metaclass=ProxyMetaclass):
     #         except Exception as ex:
     #             print('{}抓取出错: {}'.format('云代理', ex))
     #         time.sleep(1)
-    
+
     def crawl_iphai(self):
         """
         获取ip海代理
@@ -362,7 +367,7 @@ class Crawler(object, metaclass=ProxyMetaclass):
             print('{}抓取出错: {}'.format('神鸡代理', ex))
 
     # 10.西拉免费代理
-    def crawl_xiladaili(self):
+    def crawl_xiladaili(self, page_count=10):
         headers = {
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
             'Accept-Encoding': 'gzip, deflate',
@@ -376,7 +381,7 @@ class Crawler(object, metaclass=ProxyMetaclass):
 
         }
         print('开始抓取---{}......'.format('西拉免费代理'))
-        for page in range(1, 100):
+        for page in range(1, page_count + 1):
             url = 'http://www.xiladaili.com/gaoni/{}'.format(page)
             # response = requests.get(url=url,headers=headers)
             # root = etree.HTML(response.text)
@@ -395,7 +400,7 @@ class Crawler(object, metaclass=ProxyMetaclass):
             time.sleep(1)
 
     # 11.极速代理
-    def crawl_superfastip(self):
+    def crawl_superfastip(self, page_count=10):
         headers = {
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
             'Accept-Encoding': 'gzip, deflate',
@@ -409,7 +414,7 @@ class Crawler(object, metaclass=ProxyMetaclass):
 
         }
         print('开始抓取---{}......'.format('极速代理'))
-        for page in range(1, 100):
+        for page in range(1, page_count + 1):
             url = 'http://www.superfastip.com/welcome/freeIP/{}'.format(page)
 
             # response = requests.get(url=url,headers=headers)
@@ -430,7 +435,7 @@ class Crawler(object, metaclass=ProxyMetaclass):
             time.sleep(1)
 
     # 12.尼玛代理
-    def crawl_nimadaili(self):
+    def crawl_nimadaili(self, page_count=10):
         headers = {
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
             'Accept-Encoding': 'gzip, deflate',
@@ -444,7 +449,7 @@ class Crawler(object, metaclass=ProxyMetaclass):
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
         }
         print('开始抓取---{}......'.format('泥马代理'))
-        for page in range(1, 100):
+        for page in range(1, page_count + 1):
             url = 'http://www.nimadaili.com/gaoni/{}/'.format(page)
             try:
                 html = get_page(url=url, options=headers)
@@ -459,3 +464,6 @@ class Crawler(object, metaclass=ProxyMetaclass):
                 print('{}抓取出错: {}'.format('尼玛代理', ex))
             time.sleep(1)
 
+    # # 13.极光代理
+    # def crawl_jiguangdaili(self, page_count=10):
+    #     pass

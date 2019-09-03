@@ -1,10 +1,12 @@
 import time
 from multiprocessing import Process
-from proxypool.api import app
 from proxypool.getter import Getter
 from proxypool.tester import Tester
-from proxypool.db import RedisClient
+# from proxypool.db import RedisClient
 from proxypool.setting import *
+# from proxypool.api import app
+from proxypool.aioapi import app
+from aiohttp import web
 
 
 class Scheduler():
@@ -32,7 +34,8 @@ class Scheduler():
         """
         开启API
         """
-        app.run(API_HOST, API_PORT)
+        # app.run(API_HOST, API_PORT)
+        web.run_app(app=app, host=API_HOST, port=API_PORT)
     
     def run(self):
         print('代理池开始运行')

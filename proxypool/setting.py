@@ -24,18 +24,18 @@ POOL_UPPER_THRESHOLD = 5000
 # 检查周期(秒)
 TESTER_CYCLE = 20
 # 获取周期(秒)
-GETTER_CYCLE = 60*10
+GETTER_CYCLE = 60*30
 
 # 测试API，建议抓哪个网站测哪个
 TEST_URL = 'http://www.baidu.com'
 
 # API配置
 API_HOST = '192.168.1.79'
-API_PORT = 5555
+API_PORT = 4444
 
 # 开关
-TESTER_ENABLED = True
-GETTER_ENABLED = True
+TESTER_ENABLED = False
+GETTER_ENABLED = False
 API_ENABLED = True
 
 # 最大批测试量

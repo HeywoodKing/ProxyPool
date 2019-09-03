@@ -1,10 +1,11 @@
-from proxypool.tester import Tester
+# from proxypool.tester import Tester
 from proxypool.db import RedisClient
 from proxypool.crawler import Crawler
 from proxypool.setting import *
 import sys
 
-class Getter():
+
+class Getter(object):
     def __init__(self):
         self.redis = RedisClient()
         self.crawler = Crawler()
@@ -26,5 +27,6 @@ class Getter():
                 # 获取代理
                 proxies = self.crawler.get_proxies(callback)
                 sys.stdout.flush()
+                # 将这一批次获取到的代理添加到redis库中
                 for proxy in proxies:
                     self.redis.add(proxy)
