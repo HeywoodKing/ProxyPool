@@ -32,6 +32,8 @@ TEST_URL = 'http://www.baidu.com'
 # API配置
 API_HOST = '192.168.1.79'
 API_PORT = 4444
+# aiohttp | fastapi | flask | vibora
+API_SOURCE = 'flask'
 
 # 开关
 TESTER_ENABLED = False

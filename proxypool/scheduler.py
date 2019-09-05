@@ -4,9 +4,6 @@ from proxypool.getter import Getter
 from proxypool.tester import Tester
 # from proxypool.db import RedisClient
 from proxypool.setting import *
-# from proxypool.api_flask import app
-from proxypool.api_aiohttp import app
-from aiohttp import web
 
 
 class Scheduler():
@@ -34,8 +31,17 @@ class Scheduler():
         """
         开启API
         """
-        # app.run(API_HOST, API_PORT)
-        web.run_app(app=app, host=API_HOST, port=API_PORT)
+        if API_SOURCE.upper() == 'FLASK':
+            from proxypool.api_flask import app
+            app.run(API_HOST, API_PORT)
+        elif API_SOURCE.upper() == 'AIOHTTP':
+            from aiohttp import web
+            from proxypool.api_aiohttp import app
+            web.run_app(app=app, host=API_HOST, port=API_PORT)
+        elif API_SOURCE.upper() == 'FASTAPI':
+            pass
+        elif API_SOURCE.upper() == 'VIBORA':
+            pass
     
     def run(self):
         print('代理池开始运行')
