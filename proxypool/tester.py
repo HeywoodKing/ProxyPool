@@ -33,6 +33,8 @@ class Tester(object):
                         print('代理可用', proxy)
                     else:
                         self.redis.decrease(proxy)
+                        # 将分数减掉之后，如果分数小于0，则移除
+                        self.redis.remove()
                         print('请求响应码不合法 ', response.status, 'IP', proxy)
             except (ClientError, aiohttp.client_exceptions.ClientConnectorError, asyncio.TimeoutError, AttributeError):
                 self.redis.decrease(proxy)

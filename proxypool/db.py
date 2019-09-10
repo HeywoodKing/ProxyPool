@@ -97,6 +97,13 @@ class RedisClient(object):
         :return: 分值最大的全部代理列表
         """
         return self.db.zrangebyscore(REDIS_KEY, MAX_SCORE, MAX_SCORE)
+
+    def remove(self):
+        """
+        根据分数范围删除
+        :return:
+        """
+        return self.db.zremrangebyscore(REDIS_KEY, -MAX_SCORE, MIN_SCORE)
     
     def batch(self, start, stop):
         """
