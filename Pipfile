@@ -13,10 +13,6 @@ pyquery = "*"
 bs4 = "*"
 
 [packages]
-aiohttp = ">=1.3.3"
-requests = ">=2.13.0"
-pyquery = ">=1.2.17"
-Flask = ">=0.11.1"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
