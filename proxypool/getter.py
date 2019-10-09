@@ -14,6 +14,10 @@ class Getter(object):
         """
         判断是否达到了代理池限制
         """
+        # 当值小于0时,不限制reids数量
+        if POOL_UPPER_THRESHOLD <= -1:
+            return False
+
         if self.redis.count() >= POOL_UPPER_THRESHOLD:
             return True
         else:
@@ -29,4 +33,7 @@ class Getter(object):
                 sys.stdout.flush()
                 # 将这一批次获取到的代理添加到redis库中
                 for proxy in proxies:
-                    self.redis.add(proxy)
+                    if GETTER_PROXY_NO_PORT:
+                        self.redis.add(proxy.split(':')[0])
+                    else:
+                        self.redis.add(proxy)

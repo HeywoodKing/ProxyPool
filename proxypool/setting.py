@@ -1,16 +1,18 @@
-# # Redis端口
-# REDIS_PORT = 6379
-# # Redis密码，如无填None
-# REDIS_PASSWORD = None
-# REDIS_KEY = 'proxies'
+# Redis数据库地址
+REDIS_HOST = '172.17.0.3'
+# Redis端口
+REDIS_PORT = 6379
+# Redis密码，如无填None
+REDIS_PASSWORD = None
+REDIS_KEY = 'proxies'
 
 # Redis数据库地址
-REDIS_HOST = '121.201.107.156'
-# Redis端口
-REDIS_PORT = 6377
-# Redis密码，如无填None
-REDIS_PASSWORD = 'whbvybui789214^%&NJcn2jmci208U980ui21803uf0jhv02jh098hvnhu2jh938ASDEF2324Cdgrv'
-REDIS_KEY = 'proxies'
+# REDIS_HOST = '121.201.107.156'
+# # Redis端口
+# REDIS_PORT = 6377
+# # Redis密码，如无填None
+# REDIS_PASSWORD = 'whbvybui789214^%&NJcn2jmci208U980ui21803uf0jhv02jh098hvnhu2jh938ASDEF2324Cdgrv'
+# REDIS_KEY = 'proxies'
 
 
 # 代理分数
@@ -23,7 +25,9 @@ ADJUST_SCORE = -20
 VALID_STATUS_CODES = [200, 302]
 
 # 代理池数量界限
-POOL_UPPER_THRESHOLD = 5000
+POOL_UPPER_THRESHOLD = -1
+# 是否只获取IP不需要端口
+GETTER_PROXY_NO_PORT = True
 
 # 检查周期(秒)，默认20秒检测一遍代理池IP是否可用
 TESTER_CYCLE = 20
@@ -40,7 +44,7 @@ API_PORT = 5555
 API_SOURCE = 'flask'
 
 # 开关
-TESTER_ENABLED = True
+TESTER_ENABLED = False
 GETTER_ENABLED = True
 API_ENABLED = True
 
