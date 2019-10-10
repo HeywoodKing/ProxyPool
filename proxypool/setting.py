@@ -1,18 +1,18 @@
-# Redis数据库地址
-REDIS_HOST = '172.17.0.3'
-# Redis端口
-REDIS_PORT = 6379
-# Redis密码，如无填None
-REDIS_PASSWORD = None
-REDIS_KEY = 'proxies'
+# # Redis数据库地址
+# REDIS_HOST = '172.17.0.3'
+# # Redis端口
+# REDIS_PORT = 6379
+# # Redis密码，如无填None
+# REDIS_PASSWORD = None
+# REDIS_KEY = 'proxies'
 
 # Redis数据库地址
-# REDIS_HOST = '121.201.107.156'
-# # Redis端口
-# REDIS_PORT = 6377
-# # Redis密码，如无填None
-# REDIS_PASSWORD = 'whbvybui789214^%&NJcn2jmci208U980ui21803uf0jhv02jh098hvnhu2jh938ASDEF2324Cdgrv'
-# REDIS_KEY = 'proxies'
+REDIS_HOST = '121.201.107.56'
+# Redis端口
+REDIS_PORT = 6377
+# Redis密码，如无填None
+REDIS_PASSWORD = 'whbvybui789214^%&NJcn2jmci208U980ui21803uf0jhv02jh098hvnhu2jh938ASDEF2324Cdgrv'
+REDIS_KEY = 'proxies'
 
 
 # 代理分数
@@ -39,7 +39,7 @@ TEST_URL = 'http://www.baidu.com'
 
 # API配置
 API_HOST = '192.168.1.79'
-API_PORT = 5555
+API_PORT = 5556
 # aiohttp | fastapi | flask | vibora
 API_SOURCE = 'flask'
 
