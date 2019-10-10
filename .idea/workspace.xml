@@ -48,14 +48,14 @@
           <entry key="Pipfile" value="7" />
           <entry key="dummy" value="19" />
           <entry key="md" value="275" />
-          <entry key="py" value="2717" />
+          <entry key="py" value="2718" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="268" />
           <entry key="PLAIN_TEXT" value="26" />
-          <entry key="Python" value="2724" />
+          <entry key="Python" value="2725" />
         </counts>
       </usages-collector>
     </session>
@@ -66,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/proxypool/db.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="109" column="12" lean-forward="true" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
+              <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
                 <marker date="1568032222601" expanded="true" signature="2915:3057" ph="..." />
@@ -78,8 +78,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/proxypool/setting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state relative-caret-position="171">
+              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -181,7 +181,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PyEmail" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProxyPool_fetch_proxy" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -409,7 +409,7 @@
     <entry file="file://$PROJECT_DIR$/proxypool/db.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="109" column="12" lean-forward="true" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
+          <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
             <marker date="1568032222601" expanded="true" signature="2915:3057" ph="..." />
@@ -419,8 +419,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/proxypool/setting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="171">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="30" />
         </state>
       </provider>
     </entry>
