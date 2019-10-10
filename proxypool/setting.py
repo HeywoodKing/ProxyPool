@@ -1,5 +1,3 @@
-# # Redis数据库地址
-# REDIS_HOST = '192.168.1.141'
 # # Redis端口
 # REDIS_PORT = 6379
 # # Redis密码，如无填None
