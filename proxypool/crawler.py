@@ -318,23 +318,23 @@ class Crawler(object, metaclass=ProxyMetaclass):
     #         print('{}抓取出错: {}'.format('无忧代理', ex))
 
     # 2019-08-27
-    def crawl_31f(self):
-        print('开始抓取---三一代理......')
-        urls = ['http://31f.cn/http-proxy/', 'http://31f.cn/https-proxy/']
-        for url in urls:
-            try:
-                html = get_page(url=url)
-                if html:
-                    root = etree.HTML(html)
-                    rows = root.xpath("//table[@class='table table-striped']/tr")
-                    for row in rows[1:]:
-                        address = row.xpath("string(./td[2])")
-                        port = row.xpath("string(./td[3])")
-                        result = address + ':' + port
-                        yield result.replace(' ', '')
-
-            except Exception as ex:
-                print('{}抓取出错: {}'.format('三一代理', ex))
+    # def crawl_31f(self):
+    #     print('开始抓取---三一代理......')
+    #     urls = ['http://31f.cn/http-proxy/', 'http://31f.cn/https-proxy/']
+    #     for url in urls:
+    #         try:
+    #             html = get_page(url=url)
+    #             if html:
+    #                 root = etree.HTML(html)
+    #                 rows = root.xpath("//table[@class='table table-striped']/tr")
+    #                 for row in rows[1:]:
+    #                     address = row.xpath("string(./td[2])")
+    #                     port = row.xpath("string(./td[3])")
+    #                     result = address + ':' + port
+    #                     yield result.replace(' ', '')
+    #
+    #         except Exception as ex:
+    #             print('{}抓取出错: {}'.format('三一代理', ex))
 
     # 4.89免费代理
     def crawl_89ip(self):
