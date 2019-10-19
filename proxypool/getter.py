@@ -27,13 +27,17 @@ class Getter(object):
         print('获取器开始执行')
         if not self.is_over_threshold():
             for callback_label in range(self.crawler.__CrawlFuncCount__):
-                callback = self.crawler.__CrawlFunc__[callback_label]
-                # 获取代理
-                proxies = self.crawler.get_proxies(callback)
-                sys.stdout.flush()
-                # 将这一批次获取到的代理添加到redis库中
-                for proxy in proxies:
-                    if GETTER_PROXY_NO_PORT:
-                        self.redis.add(proxy.split(':')[0])
-                    else:
-                        self.redis.add(proxy)
+                try:
+                    callback = self.crawler.__CrawlFunc__[callback_label]
+                    # 获取代理
+                    proxies = self.crawler.get_proxies(callback)
+                    sys.stdout.flush()
+                    # 将这一批次获取到的代理添加到redis库中
+                    for proxy in proxies:
+                        if GETTER_PROXY_NO_PORT:
+                            self.redis.add(proxy.split(':')[0])
+                        else:
+                            self.redis.add(proxy)
+                except Exception as ex:
+                    print('获取器获取代理出现异常：{}，已跳过异常继续执行...'.format(ex))
+                    continue

@@ -267,7 +267,7 @@ class Crawler(object, metaclass=ProxyMetaclass):
         获取data5u代理
         :return:
         """
-        url = 'http://www.data5u.com/free/gngn/index.shtml'
+        url = 'http://www.data5u.com/index.shtml'
         headers = {
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
             'Accept-Encoding': 'gzip, deflate',
@@ -276,7 +276,7 @@ class Crawler(object, metaclass=ProxyMetaclass):
             'Connection': 'keep-alive',
             'Cookie': 'JSESSIONID=47AA0C887112A2D83EE040405F837A86',
             'Host': 'www.data5u.com',
-            'Referer': 'http://www.data5u.com/free/index.shtml',
+            'Referer': 'http://www.data5u.com',
             'Upgrade-Insecure-Requests': '1',
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
         }
@@ -317,24 +317,24 @@ class Crawler(object, metaclass=ProxyMetaclass):
     #     except Exception as ex:
     #         print('{}抓取出错: {}'.format('无忧代理', ex))
 
-    # 2019-08-27
-    def crawl_31f(self):
-        print('开始抓取---三一代理......')
-        urls = ['http://31f.cn/http-proxy/', 'http://31f.cn/https-proxy/']
-        for url in urls:
-            try:
-                html = get_page(url=url)
-                if html:
-                    root = etree.HTML(html)
-                    rows = root.xpath("//table[@class='table table-striped']/tr")
-                    for row in rows[1:]:
-                        address = row.xpath("string(./td[2])")
-                        port = row.xpath("string(./td[3])")
-                        result = address + ':' + port
-                        yield result.replace(' ', '')
-
-            except Exception as ex:
-                print('{}抓取出错: {}'.format('三一代理', ex))
+    # 2019-08-27 31代理网站已关闭
+    # def crawl_31f(self):
+    #     print('开始抓取---三一代理......')
+    #     urls = ['http://31f.cn/http-proxy/', 'http://31f.cn/https-proxy/']
+    #     for url in urls:
+    #         try:
+    #             html = get_page(url=url)
+    #             if html:
+    #                 root = etree.HTML(html)
+    #                 rows = root.xpath("//table[@class='table table-striped']/tr")
+    #                 for row in rows[1:]:
+    #                     address = row.xpath("string(./td[2])")
+    #                     port = row.xpath("string(./td[3])")
+    #                     result = address + ':' + port
+    #                     yield result.replace(' ', '')
+    #
+    #         except Exception as ex:
+    #             print('{}抓取出错: {}'.format('三一代理', ex))
 
     # 4.89免费代理
     def crawl_89ip(self):
