@@ -1,9 +1,23 @@
+<<<<<<< HEAD
+# Redis数据库地址
+REDIS_HOST = '192.168.99.100'
+# Redis端口
+=======
 # Redis端口
 REDIS_HOST = '172.17.0.3'
+>>>>>>> 3e4475a789b0e5d298235cf70cb62c5ecb82f6dd
 REDIS_PORT = 6379
 # Redis密码，如无填None
 REDIS_PASSWORD = None
 REDIS_KEY = 'proxies'
+
+# # Redis数据库地址
+# REDIS_HOST = '121.201.107.56'
+# # Redis端口
+# REDIS_PORT = 6377
+# # Redis密码，如无填None
+# REDIS_PASSWORD = 'whbvybui789214^%&NJcn2jmci208U980ui21803uf0jhv02jh098hvnhu2jh938ASDEF2324Cdgrv'
+# REDIS_KEY = 'proxies'
 
 
 # # Redis数据库地址
