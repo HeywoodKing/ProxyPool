@@ -6,6 +6,15 @@ REDIS_PASSWORD = None
 REDIS_KEY = 'proxies'
 
 
+# # Redis数据库地址
+# REDIS_HOST = '121.201.107.156'
+# # Redis端口
+# REDIS_PORT = 6377
+# # Redis密码，如无填None
+# REDIS_PASSWORD = 'whbvybui789214^%&NJcn2jmci208U980ui21803uf0jhv02jh098hvnhu2jh938ASDEF2324Cdgrv'
+# REDIS_KEY = 'proxies'
+
+
 # 代理分数
 MAX_SCORE = 100
 MIN_SCORE = 0
