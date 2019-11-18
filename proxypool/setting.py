@@ -31,8 +31,8 @@ GETTER_PROXY_NO_PORT = True
 
 # 检查周期(秒)，默认20秒检测一遍代理池IP是否可用
 TESTER_CYCLE = 20
-# 获取周期(秒)，默认10分钟，抓取一次代理IP
-GETTER_CYCLE = 60*20
+# 获取周期(秒)，默认30分钟，抓取一次代理IP
+GETTER_CYCLE = 60*30
 
 # 测试API，建议抓哪个网站测哪个
 TEST_URL = 'http://www.baidu.com'

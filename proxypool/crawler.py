@@ -3,6 +3,7 @@ import re
 import time
 from .utils import get_page
 from pyquery import PyQuery as pq
+from datetime import datetime
 from lxml import etree
 
 
@@ -27,7 +28,7 @@ class Crawler(object, metaclass=ProxyMetaclass):
         """
         proxies = []
         for proxy in eval("self.{}()".format(callback)):
-            print('成功获取到代理', proxy)
+            print(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), '成功获取到代理', proxy)
             proxies.append(proxy)
         return proxies
 

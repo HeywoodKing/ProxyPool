@@ -2,6 +2,7 @@
 from proxypool.db import RedisClient
 from proxypool.crawler import Crawler
 from proxypool.setting import *
+from datetime import datetime
 import sys
 
 
@@ -39,5 +40,5 @@ class Getter(object):
                         else:
                             self.redis.add(proxy)
                 except Exception as ex:
-                    print('获取器获取代理出现异常：{}，已跳过异常继续执行...'.format(ex))
+                    print(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), '获取器获取代理出现异常：{}，已跳过异常继续执行...'.format(ex))
                     continue

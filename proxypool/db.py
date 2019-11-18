@@ -3,6 +3,7 @@ from proxypool.error import PoolEmptyError
 from proxypool.setting import REDIS_HOST, REDIS_PORT, REDIS_PASSWORD, REDIS_KEY
 from proxypool.setting import MAX_SCORE, MIN_SCORE, INITIAL_SCORE, ADJUST_SCORE,GETTER_PROXY_NO_PORT
 from random import choice
+from datetime import datetime
 import re
 
 
@@ -25,7 +26,7 @@ class RedisClient(object):
         """
         if not GETTER_PROXY_NO_PORT:
             if not re.match('\d+\.\d+\.\d+\.\d+\:\d+', proxy):
-                print('代理不符合规范', proxy, '丢弃')
+                print(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), '代理不符合规范', proxy, '丢弃')
                 return
 
         if not self.db.zscore(REDIS_KEY, proxy):
