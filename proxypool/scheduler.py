@@ -3,6 +3,7 @@ from multiprocessing import Process
 from proxypool.getter import Getter
 from proxypool.tester import Tester
 from proxypool.setting import *
+from datetime import datetime
 
 
 class Scheduler():
@@ -12,7 +13,7 @@ class Scheduler():
         """
         tester = Tester()
         while True:
-            print('测试器开始运行')
+            print(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), '测试器开始运行')
             tester.run()
             time.sleep(cycle)
     
@@ -22,7 +23,7 @@ class Scheduler():
         """
         getter = Getter()
         while True:
-            print('开始抓取代理')
+            print(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), '开始抓取代理')
             getter.run()
             time.sleep(cycle)
     
@@ -43,7 +44,7 @@ class Scheduler():
             pass
     
     def run(self):
-        print('代理池开始运行')
+        print(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), '代理池开始运行')
         
         if TESTER_ENABLED:
             tester_process = Process(target=self.schedule_tester)
