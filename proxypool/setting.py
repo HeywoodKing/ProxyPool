@@ -7,7 +7,8 @@
 # REDIS_KEY = 'proxies'
 
 # Redis数据库地址
-REDIS_HOST = '121.201.107.56'
+# REDIS_HOST = '121.201.107.56'
+REDIS_HOST = '110.43.50.188'
 # Redis端口
 REDIS_PORT = 6377
 # Redis密码，如无填None
